@@ -5,11 +5,12 @@ Kubeaid is a workflow-driven platform automation engine that allows SREs and Pla
 ![System Architecture](./docs/arc.png)
 
 ## Tech stack
-1.Frontend: NextJS
-2.Backend services: FastAPI
-3.API Gateway: Kong
-4.Queue system: Kafka
-5.Workflow orchestrator: Temporal
+1. Frontend: NextJS
+2. Backend services: FastAPI
+3. Database: PostgreSQL
+4. Queue system: Kafka
+5. API Gateway: Kong
+6. Workflow orchestrator: Temporal
 
 ## Note 
 For extra added security, this project will be available as a helm chart. Fully air-gapped, this project makes sure that internal data does not reach external cloud providers 
