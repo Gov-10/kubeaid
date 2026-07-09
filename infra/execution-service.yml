@@ -4,8 +4,7 @@ metadata:
   name: execution-service 
 spec:
   selector:
-    matchLabels:
-      app: execution 
+    app: execution 
   ports:
     - port: 8001
       targetPort: 8001
