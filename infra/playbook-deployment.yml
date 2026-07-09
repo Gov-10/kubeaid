@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: playbook-deployment
+  labels:
+    app: playbook
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: playbook
+  template:
+    metadata:
+      labels:
+        app: playbook
+    spec:
+      containers:
+        - name: playbook
+          ports:
+            - containerPort: 8000
+          envFrom:
+            - secretRef:
+                name: playbook-secrets
