@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment 
+metadata:
+  name: execution-deployment 
+  labels:
+    app: execution 
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: execution
+  template:
+    metadata:
+      labels:
+        app: execution
+    spec:
+      containers:
+        - name: execution 
+          image: 
+          ports:
+            - containerPort: 8001
+          envFrom:
+            - secretRef:
+                name: execution-secret
